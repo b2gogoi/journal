@@ -1,0 +1,275 @@
+body {
+	font-family: "Arial Narrow", Arial, sans-serif;
+	color: #444140;
+	background: white;
+}
+
+div > a:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+div > a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.article > p {
+	font-family: arial;
+	text-align: left;
+	text-overflow: wrap;
+	overflow: hidden;
+	margin: 0 1em;
+}
+
+#content {
+	background: white;
+}
+
+.article > h2 {
+	font-size: 3em;
+	font-weight: 600;
+	display: inline;
+	text-transform: uppercase;
+}
+
+.article > h4 {
+	font-size: 2em;
+	font-weight: 600;
+	display: inline;
+	text-transform: uppercase;
+}
+
+button {
+	background: grey;
+	margin-top: 2em;
+	color: white;
+	border: none;
+	line-height: 2.5em;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 500;
+	text-align: center;
+	padding: 0 1em;
+	min-width: 15	em;
+	display: inline-block;
+	font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+#wrapper {
+	border: 2px solid lightgrey;
+	padding: 0 1em;
+	margin: 3em 4em;
+}
+
+#banner {
+	background: white;
+	margin-top: 1.5em;
+	text-align: center;
+	padding-top: 1em;
+	text-transform: uppercase;
+}
+
+#main {
+	background: lightgrey;
+	height: 70vh;
+	position: relative;
+	vertical-align: middle;
+	padding: 20px;
+}
+
+#main > .article {
+	position: absolute;
+	right: 2em;
+	top: 50%;
+	width: 40vw;
+	transform: translateY(-50%);
+}
+
+.article {
+	text-align: center;
+}
+
+.article > p {
+	margin-top: 1em;
+}
+
+div.rubriques-first {
+	width: 80vw;
+	font-weight: 600;
+	display: grid;
+	margin: 1em auto;
+	grid-gap: 2em;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.rubriques-last { 
+	display: none;
+	margin: 0 auto;
+	min-width: 100px;
+}
+
+.rubriques-last > div {
+	border-top: 1px solid lightgrey;
+	padding: 1em;
+	margin: 0 1em;
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.program {
+	background: grey;
+	color: white;
+	margin: 1em 0;
+	line-height: 2em;
+}
+
+#subs {
+	border-top: 1px solid lightgrey;
+	margin: 1em 0;
+	padding: 1em 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+#subs > div {
+	padding-top: 2em;
+	margin-bottom: 2em;
+}
+
+#subs > div:first-child {
+	padding-right: 1em;
+}
+
+#subs > div:last-child {
+	padding-left: 1em;
+	border-left: 1px solid lightgrey;
+}
+
+.img-box {
+	background: lightgrey;
+	height: 40vw;
+	min-width: 400px;
+	margin-bottom: 1em;
+}
+
+#social {
+	text-transform: uppercase;
+	text-align: center;
+	color: #464241;
+	font-weight: 600;
+	font-size: 1.5em;
+	font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.social-icons {
+	margin: 1em auto;
+	min-width: 20em;
+}
+
+.social-icons > a {
+	background: #4D4948;
+	display: inline-block;
+	padding-top: 0.6em;
+	margin: 0 0.2em;
+	width: 2.5em;
+	height: 2em;
+	
+}
+
+.social-icons > a i {
+	color: white;
+	font-size: 1.2em;
+}
+
+footer {
+	text-align: center;
+	text-transform: none;
+	font-weight: 400;
+	color: #ABB2B9;
+	font-family: Arial;
+	font-size: small;
+
+	padding-bottom: 4em;
+	background: white;
+	margin: 0 0;
+}
+
+address {
+	font-style: normal;
+}
+
+address:first-of-type {
+	margin-top: 1em;
+}
+
+address:first-of-type > small:first-child::after {
+	content: ', ';
+}
+
+address:last-of-type > small:first-child::after {
+	content: ' | ';
+}
+
+#mobile {
+	margin: 1em;
+}
+
+@media screen and (orientation: portrait), 
+screen and (-webkit-device-pixel-ratio:3),
+screen and (max-width: 800px)
+ {	
+	#wrapper {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	#banner > img {
+		width: 60vw;
+	}
+
+	#main > .article {
+		right: 50%;
+		width: 80%;
+		transform: translate(50%, -50%);
+	}
+
+	div.rubriques-first { 
+		display: none;
+	}	
+
+	.rubriques-last { 
+		display: block; 				
+	}
+
+	.img-box {
+		height: 80vw;
+		min-width: 100px;
+	}
+
+	#subs {
+		border: none;
+		margin: 0 2em;
+		grid-template-columns: 1fr;
+	}
+
+	#subs > div {
+		border-top: 1px solid lightgrey;
+		border-left: none !important;
+		padding-right: 0 !important;
+	  	padding-left: 0 !important;
+	}
+
+	address > small:first-child:after {
+		display: none;
+	}
+
+	address > small {
+		display: block;
+	}
+
+}
